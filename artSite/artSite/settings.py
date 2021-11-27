@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'artData',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,11 +77,14 @@ WSGI_APPLICATION = 'artSite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'DATABASE NAME HERE',
+        'NAME': 'art_database',
         'HOST': '127.0.0.1',
         'PORT': '3306',
-        'USER': 'PUT YOUR USER HERE (mine was root)',
-        'PASSWORD': 'PUT YOUR PW HERE'
+        'USER': 'root',
+        'PASSWORD': 'pw here',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+         }   
     }
 }
 
