@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'stylesheet.css' %}">
+</head>
+<body>
+    <button id="back" class="buttnStyle" onclick="document.location.href = '/customer'"> Back </button>
+
+<form style="margin-top:100px;">
+<fieldset>
+     <h3>Customer Entry Form</h3>
+{% csrf_token %}
+    <label>First Name</label>
+    <input id="firstname" type="text" name="firstname" required><br>
+    <label>Last Name</label>
+    <input id="lastname" type="text" name="lastname" required><br>
+    <label>Street Number</label>
+    <input id="streetnum" type="number" name="streetnum" min="0"required><br>
+    <label>Street Name</label>
+    <input id="streetname" type="text" name="streetname" required><br>
+    <label>City</label>
+    <input id="city" type="text" name="city" required><br>
+    <label>State</label>
+    <input id="state" type="text" name="state" min="0"required><br>
+    <label>Zip Code</label>
+    <input id="zipcode" type="number" name="zipcode" min="0" required><br>
+    <label>Phone Number</label>
+    <input id="phone" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+    <label>Preferred Style</label>
+    <input id="style" type="text" name="style" required><br>
+    <label>Preferred Medium</label>
+    <input id="medium" type="text" name="medium" required><br>
+    <label>Artist ID</label>
+    <input id="artistid" type="number" name="artistid" min="0"required><br>
+
+<input type="submit">
+</fieldset>
+
+</form>
+
+
+</body>
+</html>
