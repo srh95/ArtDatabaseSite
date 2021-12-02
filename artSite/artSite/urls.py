@@ -1,22 +1,24 @@
-"""artSite URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
-from django.urls import include, path
+from django.urls import path
+from artData import views
 
 urlpatterns = [
-    path('artData/', include('artData.urls')),
-    path('admin/', admin.site.urls),
-]
+    path('', views.homepage, name = 'home'),
+    path('cust_form/', views.cust_form),
+    path('cust_display', views.display, name = 'display'),
+    path('dataEntry', views.dataEntry, name='dataEntry'),
+    path('artist', views.artist, name = 'artist'),
+    path('addArtist', views.addArtist, name = 'addArtist'),
+    path('artwork', views.artwork, name = 'artwork'),
+    path('artshow', views.artshow, name = 'artshow'),
+    path('customer', views.customer, name = 'customer'),
+    path('addCustomer', views.addCustomer, name = 'addCustomer'),
+    path('collector', views.collector, name = 'collector'),
+    path('buyer', views.buyer, name = 'buyer'),
+    path('renter', views.renter, name = 'renter'),
+    path('sale', views.sale, name = 'sale'),
+    path('rent', views.rent, name = 'rent'),
+    path('displayed', views.displayed, name = 'displayed'),
+    path('sold', views.sold, name = 'sold'),
+    path('rented', views.rented, name = 'rented')
+
+    ]

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'stylesheet.css' %}">
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+    <button id="back" class="buttnStyle" onclick="document.location.href = '/dataEntry'"> Back </button>
+
+<h2 style="margin-top:100px;">Artshow Table</h2>
+
+<table style="margin-top:15px;">
+  <tr>
+    <th>Show Name</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Time</th>
+    <th>Street Number</th>
+    <th>Street Name</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip code</th>
+  </tr>
+  {% for artshow in artshows %}
+  <tr>
+    <td>{{artshow.show_name}}</td>
+  </tr>
+  <tr>
+    <td>{{artshow.start_date}}</td>
+  </tr>
+  <tr>
+    <td>{{artshow.end_date}}</td>
+  </tr>
+  <tr>
+    <td>{{artshow.time}}</td>
+  </tr>
+  <tr>
+    <td>{{artshow.style}}</td>
+  </tr>
+  <tr>
+    <td>{{artshow.street_num}}</td>
+  </tr>
+    <tr>
+    <td>{{artshow.street_name}}</td>
+  </tr>
+    <tr>
+    <td>{{artshow.city}}</td>
+  </tr>
+  <tr>
+    <td>{{artshow.state}}</td>
+  </tr>
+  <tr>
+    <td>{{artshow.zip_code}}</td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+<button id="addbtn" class="centerbtn">Add Artshow</button>
+
+</body>
+</html>

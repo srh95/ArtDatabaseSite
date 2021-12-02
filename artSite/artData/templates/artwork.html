@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'stylesheet.css' %}">
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+    <button id="back" class="buttnStyle" onclick="document.location.href = '/dataEntry'"> Back </button>
+
+<h2 style="margin-top:100px;">Artwork Table</h2>
+
+<table style="margin-top:15px;">
+  <tr>
+    <th>Title</th>
+    <th>Artist ID</th>
+    <th>Collector ID</th>
+    <th>Year</th>
+    <th>Style</th>
+    <th>Type</th>
+    <th>Medium</th>
+    <th>Asking Price</th>
+  </tr>
+  {% for artwork in artworks %}
+  <tr>
+    <td>{{artwork.title}}</td>
+  </tr>
+  <tr>
+    <td>{{artwork.artist_id}}</td>
+  </tr>
+  <tr>
+    <td>{{artwork.collector_id}}</td>
+  </tr>
+  <tr>
+    <td>{{artwork.year}}</td>
+  </tr>
+  <tr>
+    <td>{{artwork.style}}</td>
+  </tr>
+  <tr>
+    <td>{{artwork.type}}</td>
+  </tr>
+    <tr>
+    <td>{{artwork.medium}}</td>
+  </tr>
+    <tr>
+    <td>{{artwork.asking_price}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<button id="addbtn" class="centerbtn">Add Artwork</button>
+
+</body>
+</html>
+
+

@@ -1,0 +1,317 @@
+body{
+    background-color: rgb(245, 241, 241)
+}
+
+#content {
+    position: relative;
+}
+#content img {
+    position: fixed;
+    top: -5px;
+    left: 0px;
+    right: 0px;
+}
+.first-txt {
+    position: absolute;
+    bottom: 320px;
+    left: 215px;
+    color: white;
+    text-shadow: 3px 3px #312f2f;
+}
+
+h1{
+    font-size: 90px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 2000;
+ }
+
+.buttnStyle {
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: fixed;
+    left: 500px;
+}
+
+#DataEntry{
+position: absolute;
+left: 530px;
+top:455px;
+background: #165397;
+border-radius: 4px;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-size:20px;
+color: white;
+
+}
+#DataEntry:hover{
+    background: #000;
+}
+
+#ViewData{
+    position: absolute;
+    left: 730px;
+    top:455px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+    
+}
+
+#ViewData:hover{
+    background: #000;
+}
+
+#back{
+    position: absolute;
+    left: 20px;
+    top:20px;
+    padding: 10px 25px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:15px;
+    color: white;
+    
+}
+#back:hover{
+    background: #000;
+}
+
+.selection-text{
+    position: absolute;
+    top: 170px;
+    left: 570px;
+
+}
+
+#artwork{
+    position: absolute;
+    left: 350px;
+    top:300px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+    
+}
+#artwork:hover{
+    background: #000;
+}
+
+#artist{
+    position: absolute;
+    padding: 15px 45px;
+    left: 550px;
+    top:300px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+    
+}
+#artist:hover{
+    background: #000;
+}
+
+#collector{
+    position: absolute;
+    left: 750px;
+    top:300px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+    
+}
+#collector:hover{
+    background: #000;
+}
+
+#customer{
+    position: absolute;
+    left: 950px;
+    top:300px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+    
+}
+#customer:hover{
+    background: #000;
+}
+
+#artshow{
+    position: absolute;
+    padding: 15px 27px;
+    left: 350px;
+    top: 400px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+    
+}
+#artshow:hover{
+    background: #000;
+}
+
+#buyer{
+    position: absolute;
+    padding: 15px 45px;
+    left: 550px;
+    top: 400px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+    
+}
+#buyer:hover{
+    background: #000;
+}
+
+#renter{
+    position: absolute;
+    padding: 15px 45px;
+    left: 750px;
+    top: 400px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+    
+}
+#renter:hover{
+    background: #000;
+}
+
+#sale{
+    position: absolute;
+    padding: 15px 60px;
+    left: 950px;
+    top: 400px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+    
+}
+#sale:hover{
+    background: #000;
+}
+
+#rent{
+    position: absolute;
+    padding: 15px 51px;
+    left: 350px;
+    top: 500px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+    
+}
+#rent:hover{
+    background: #000;
+}
+
+#sold{
+    position: absolute;
+    padding: 15px 41px;
+    left: 550px;
+    top: 500px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+    
+}
+#sold:hover{
+    background: #000;
+}
+
+#rented{
+    position: absolute;
+    padding: 15px 30px;
+    left: 750px;
+    top: 500px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+    
+}
+#rented:hover{
+    background: #000;
+}
+
+#displayed{
+    position: absolute;
+    padding: 15px 25px;
+    left: 950px;
+    top: 500px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+    
+}
+#displayed:hover{
+    background: #000;
+}
+
+.centerbtn {
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+#addbtn{
+    position: absolute;
+    padding: 10px 25px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:15px;
+    color: white;
+}
+
+form { 
+    margin: 0 auto; 
+    width:500px;
+}
+
+fieldset {
+    padding-top:10px;
+	border:1px solid #666;
+	border-radius:8px;
+	box-shadow:0 0 10px #666;
+    background-color: #f5f5f5;
+    text-align: center;
+}

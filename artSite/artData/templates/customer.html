@@ -1,11 +1,92 @@
-<div class="container">
-    <form method = "POST">
-        <fieldset>
-            <legend>Customer Form</legend>
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </fieldset>
-    </form>
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'stylesheet.css' %}">
 
-</div>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+    <button id="back" class="buttnStyle" onclick="document.location.href = '/dataEntry'"> Back </button>
+
+<h2 style="margin-top:100px;">Customer Table</h2>
+
+<table style="margin-top:15px;">
+  <tr>
+    <th>Customer ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Street Number</th>
+    <th>Street Name</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip code</th>
+    <th>Phone Number</th>
+    <th>Preferred Artist ID</th>
+    <th>Preferred Style</th>
+    <th>Preferred Medium</th>
+  </tr>
+  {% for customer in customers %}
+  <tr>
+    <td>{{customer.id}}</td>
+
+  </tr>
+  <tr>
+    <td>{{customer.first_name}}</td>
+
+  </tr>
+  <tr>
+    <td>{{customer.first_name}}</td>
+  </tr>
+  <tr>
+    <td>{{customer.street_num}}</td>
+  </tr>
+  <tr>
+    <td>{{customer.street_name}}</td>
+
+  </tr>
+  <tr>
+    <td>{{customer.city}}</td>
+  </tr>
+    <tr>
+    <td>{{customer.state}}</td>
+  </tr>
+    <tr>
+    <td>{{customer.zip_code}}</td>
+  </tr>
+    <tr>
+    <td>{{customer.preferred_style}}</td>
+  </tr>
+    <tr>
+    <td>{{preferred.medium}}</td>
+  </tr>
+    <tr>
+    <td>{{customer.phone_num}}</td>
+  </tr>
+    <tr>
+    <td>{{customer.artist_id}}</td>
+  </tr>
+
+  {% endfor %}
+</table>
+
+<button id="addbtn" class="centerbtn" onclick="document.location.href = '/addCustomer'">Add Customer</button>
+
+</body>
+</html>
