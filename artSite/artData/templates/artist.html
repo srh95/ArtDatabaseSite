@@ -44,36 +44,17 @@ tr:nth-child(even) {
   </tr>
   {% for artist in artists %}
   <tr>
+     <td>{{artist.id}}</td>
     <td>{{artist.first_name}}</td>
-  </tr>
-  <tr>
     <td>{{artist.last_name}}</td>
-  </tr>
-  <tr>
     <td>{{artist.street_num}}</td>
-  </tr>
-  <tr>
     <td>{{artist.street_name}}</td>
-  </tr>
-  <tr>
     <td>{{artist.city}}</td>
-  </tr>
-  <tr>
     <td>{{artist.state}}</td>
-  </tr>
-  <tr>
     <td>{{artist.zip_code}}</td>
-  </tr>
-  <tr>
     <td>{{artist.age}}</td>
-  </tr>
-  <tr>
     <td>{{artist.art_medium}}</td>
-  </tr>
-  <tr>
     <td>{{artist.art_style}}</td>
-  </tr>
-  <tr>
     <td>{{artist.type}}</td>
   </tr>
   {% endfor %}
