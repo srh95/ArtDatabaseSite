@@ -5,11 +5,11 @@
     <link rel="stylesheet" href="{%static 'stylesheet.css' %}">
 </head>
 <body>
-    <button id="back" class="buttnStyle" onclick="document.location.href = '/artshow'"> Back </button>
+    <button id="back" class="buttnStyle" onclick="document.location.href = '/rent'"> Back </button>
 
 <form method="POST" style="margin-top:100px;">
 <fieldset>
-     <h3>Artshow Entry Form</h3>
+     <h3>Rent Entry Form</h3>
 {% csrf_token %}
     {{form.as_p}}
 

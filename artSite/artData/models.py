@@ -14,14 +14,14 @@ class CustomerModel(models.Model):
     phone_num = models.CharField(max_length = 25)
     artist_id = models.IntegerField()
 
-#class ArtWorkModel(models.Model):
-    #title = models.CharField(max_length = 100)
-    #year = models.IntegerField()
-    #style = models.CharField(max_length = 50)
-    #medium = models.CharField(max_length = 50)
-    #asking_price = models.DecimalField(8,2)
-    #artist_id = models.IntegerField()
-    #collector_id = models.IntegerField()
+class ArtWorkModel(models.Model):
+    title = models.CharField(max_length = 100)
+    year = models.IntegerField()
+    style = models.CharField(max_length = 50)
+    medium = models.CharField(max_length = 50)
+    asking_price = models.DecimalField(max_digits=8, decimal_places=2)
+    artist_id = models.IntegerField()
+    collector_id = models.IntegerField()
 
 class ArtistModel(models.Model):
     artist_id = models.IntegerField()
@@ -63,21 +63,21 @@ class ArtShowModel(models.Model):
     state = models.CharField(max_length = 50)
     zip_code = models.IntegerField()
 
-#class RentModel(models.Model):
-#    invoice_num = models.IntegerField()
-#    start_date = models.DateField()
-#    return_date = models.DateField()
-#    duration = models.IntegerField()
-#    rent_fee = models.DecimalField(8,2)
-#    artist_percentage = models.IntegerField()
-#    renter_id = models.IntegerField()
+class RentModel(models.Model):
+   invoice_num = models.IntegerField()
+   start_date = models.DateField()
+   return_date = models.DateField()
+   duration = models.IntegerField()
+   rent_fee = models.DecimalField(max_digits=8, decimal_places=2)
+   artist_percentage = models.IntegerField()
+   renter_id = models.IntegerField()
 
-#class SaleModel(models.Model):
-#    sale_date = models.DateField()
-#    invoice_num = models.IntegerField()
-#    sale_price = models.DecimalField(8,2)
-#    artist_percentage = models.IntegerField()
-#    buyer_id = models.IntegerField()
+class SaleModel(models.Model):
+   sale_date = models.DateField()
+   invoice_num = models.IntegerField()
+   sale_price = models.DecimalField(max_digits=8, decimal_places=2)
+   artist_percentage = models.IntegerField()
+   buyer_id = models.IntegerField()
 
 class RenterModel(models.Model):
     renter_id = models.IntegerField()
@@ -102,6 +102,20 @@ class BuyerModel(models.Model):
     zip_code = models.IntegerField()
     phone_num = models.CharField(max_length = 25)
     num_purchase = models.IntegerField()
+
+# class DisplayedModel(models.Model):
+#     show_name = models.ForeignKey(ArtShowModel, on_delete=models.CASCADE, null=True, blank=True)
+#     art_title = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True)
+#     artist_id_display = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True)
+# class RentedModel(models.Model):
+#     invoice_num_rent = models.ForeignKey(RentModel, on_delete=models.CASCADE, null=True, blank=True)
+#     title_rent = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True,)
+#     artist_id_rent = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True)
+# class SoldModel(models.Model):
+#     invoice_num_sale = models.ForeignKey(SaleModel, on_delete=models.CASCADE, null=True, blank=True)
+#     title_sold = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True)
+#     artist_id_sold = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True)
+
 
 
 

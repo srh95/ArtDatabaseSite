@@ -3,8 +3,6 @@ from artData import views
 
 urlpatterns = [
     path('', views.homepage, name = 'home'),
-    path('cust_form/', views.cust_form),
-    path('cust_display', views.display, name = 'display'),
     path('dataEntry', views.dataEntry, name='dataEntry'),
     path('artist', views.artist, name = 'artist'),
     path('addArtist', views.addArtist, name = 'addArtist'),
@@ -19,6 +17,14 @@ urlpatterns = [
     path('rent', views.rent, name = 'rent'),
     path('displayed', views.displayed, name = 'displayed'),
     path('sold', views.sold, name = 'sold'),
-    path('rented', views.rented, name = 'rented')
+    path('rented', views.rented, name = 'rented'),
+    path('addArtwork', views.addArtwork, name = 'addArtwork'),
+    path('addArtshow', views.addArtshow, name = 'addArtshow'),
+    path('addCollector', views.addCollector, name = 'addCollector'),
+    path('addBuyer', views.addBuyer, name = 'addBuyer'),
+    path('addRenter', views.addRenter, name = 'addRenter'),
+    path('addSale', views.addSale, name = 'addSale'),
+    path('addRent', views.addRent, name = 'addRent')
+
 
     ]

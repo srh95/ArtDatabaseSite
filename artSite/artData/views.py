@@ -1,18 +1,30 @@
 from django.shortcuts import HttpResponse
 from django.shortcuts import render, redirect
-from .models import CustomerModel
-from .forms import CustomerForm
+from .models import(
+    CustomerModel,
+    ArtistModel,
+    ArtWorkModel,
+    CollectorModel,
+    ArtShowModel,
+    BuyerModel,
+    RenterModel,
+    SaleModel,
+    RentModel)
+from .forms import(
+    CustomerForm,
+    ArtistForm,
+    ArtworkForm,
+    ArtshowForm,
+    CollectorForm,
+    BuyerForm,
+    RenterForm,
+    SaleForm,
+    RentForm)
 
 
 def display(request):
     cust = CustomerModel.objects.all()
     return render(request, 'display.html', {'cust': cust})
-def cust_form(request):
-    form = CustomerForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-    context = {'form':form}
-    return render(request, 'customer.html', context)
 
 def homepage(request):
     return render(request, 'homepage.html')
@@ -21,73 +33,148 @@ def dataEntry(request):
     return render(request, 'dataEntry.html')
 
 def artist(request):
-    return render(request, 'artist.html')
+    artists = ArtistModel.objects.all()
+    context = {'artists': artists}
+    return render(request, 'artist.html', context)
 
 def addArtist(request):
-    return render(request, 'addArtist.html')
+    if request.method == 'POST':
+        form = ArtistForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = ArtistForm()
+    context = {'form': form}
+    return render(request, 'addArtist.html', context)
 
 def artwork(request):
-    artworks = ArtworkModel.objects.all()
-    return render(request, 'artwork.html',{'artworks': artworks})
+    artworks = ArtWorkModel.objects.all()
+    context = {'artworks': artworks}
+    return render(request, 'artwork.html', context)
+
+def addArtwork(request):
+    if request.method == 'POST':
+        form = ArtworkForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = ArtworkForm()
+    context = {'form': form}
+    return render(request, 'addArtwork.html', context)
 
 def collector(request):
-    return render(request, 'collector.html')
+    collectors = CollectorModel.objects.all()
+    context = {'collectors': collectors}
+    return render(request, 'collector.html', context)
+
+def addCollector(request):
+    if request.method == 'POST':
+        form = CollectorForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = CollectorForm()
+    context = {'form': form}
+    return render(request, 'addCollector.html', context)
 
 def customer(request):
     customers = CustomerModel.objects.all()
-    return render(request, 'customer.html',{'customers': customers})
+    context = {'customers': customers}
+    return render(request, 'customer.html', context)
 
 def addCustomer(request):
     if request.method == 'POST':
         form = CustomerForm(request.POST)
         if form.is_valid():
             form.save()
-            # if ~(Artist.objects.get(id=form.cleaned_data['artistid'])):
-            #     messages.error(request, 'artist does not exist')
-            #     return HttpResponseRedirect('/addCustomer')
-
-            #database = CustomerModel.objects.create(
-             #   customer_id = form.cleaned_data['customerid'],
-              #  first_name = form.cleaned_data['firstname'],
-               # last_name = form.cleaned_data['lastname'],
-                #street_num = form.cleaned_data['streetnum'],
-                #street_name = form.cleaned_data['streetname'],
-                #city = form.cleaned_data['city'],
-                #state = form.cleaned_data['state'],
-                #zip_code = form.cleaned_data['zipocde'],
-                #preferred_style = form.cleaned_data['style'],
-                #preferred_medium = form.cleaned_data['medium'],
-                #phone_num = form.cleaned_data['phone'],
-                #artist_id = form.cleaned_data['artistid']
-        #    )
-          #  database.save()
-            #return HttpResponseRedirect('/customer')
     else:
         form = CustomerForm()
-
-    return render(request, 'addCustomer.html', {'form': form})
+    context = {'form': form}
+    return render(request, 'addCustomer.html', context)
 
 def artshow(request):
     artshows = ArtShowModel.objects.all()
-    return render(request, 'artshow.html', {'artshows': artshows})
+    context = {'artshows': artshows}
+    return render(request, 'artshow.html', context)
+
+def addArtshow(request):
+    if request.method == 'POST':
+        form = ArtshowForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = ArtshowForm()
+    context = {'form': form}
+    return render(request, 'addArtshow.html', context)
 
 def buyer(request):
-    return render(request, 'buyer.html')
+    buyers = BuyerModel.objects.all()
+    context = {'buyers': buyers}
+    return render(request, 'buyer.html', context)
+
+def addBuyer(request):
+    if request.method == 'POST':
+        form = BuyerForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = BuyerForm()
+    context = {'form': form}
+    return render(request, 'addBuyer.html', context)
 
 def renter(request):
-    return render(request, 'renter.html')
+    renters = RenterModel.objects.all()
+    context = {'renters': renters}
+    return render(request, 'renter.html', context)
+
+def addRenter(request):
+    if request.method == 'POST':
+        form = RenterForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = RenterForm()
+    context = {'form': form}
+    return render(request, 'addRenter.html', context)
 
 def rent(request):
-    return render(request, 'rent.html')
+    rents = RentModel.objects.all()
+    context = {'rents': rents}
+    return render(request, 'rent.html', context)
+
+def addRent(request):
+    if request.method == 'POST':
+        form = RentForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = RentForm()
+    context = {'form': form}
+    return render(request, 'addRent.html', context)
 
 def sale(request):
-    return render(request, 'sale.html')
+    sales = SaleModel.objects.all()
+    context = {'sales': sales}
+    return render(request, 'sale.html', context)
+
+def addSale(request):
+    if request.method == 'POST':
+        form = SaleForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = SaleForm()
+    context = {'form': form}
+    return render(request, 'addSale.html', context)
 
 def displayed(request):
-    return render(request, 'displayed.html')
+    context = {}
+    return render(request, 'displayed.html', context)
 
 def sold(request):
-    return render(request, 'sold.html')
+    context = {}
+    return render(request, 'sold.html', context)
 
 def rented(request):
-    return render(request, 'rented.html')
+    context = {}
+    return render(request, 'rented.html', context)
