@@ -9,7 +9,8 @@ from .models import(
     BuyerModel,
     RenterModel,
     SaleModel,
-    RentModel)
+    RentModel,
+    query1)
 from .forms import(
     CustomerForm,
     ArtistForm,
@@ -178,3 +179,7 @@ def sold(request):
 def rented(request):
     context = {}
     return render(request, 'rented.html', context)
+
+def query1(request):
+    q1 = query1.objects.all()
+    return render(request, 'query1.html', {'q1':q1})
