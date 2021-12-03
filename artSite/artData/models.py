@@ -19,6 +19,7 @@ class ArtWorkModel(models.Model):
     year = models.IntegerField()
     style = models.CharField(max_length = 50)
     medium = models.CharField(max_length = 50)
+    type = models.CharField(max_length=50)
     asking_price = models.DecimalField(max_digits=8, decimal_places=2)
     artist_id = models.IntegerField()
     collector_id = models.IntegerField()
