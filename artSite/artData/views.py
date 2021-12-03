@@ -41,25 +41,27 @@ def addCustomer(request):
     if request.method == 'POST':
         form = CustomerForm(request.POST)
         if form.is_valid():
+            form.save()
             # if ~(Artist.objects.get(id=form.cleaned_data['artistid'])):
             #     messages.error(request, 'artist does not exist')
             #     return HttpResponseRedirect('/addCustomer')
 
-            database = CustomerModel.objects.create(
-                first_name = form.cleaned_data['firstname'],
-                last_name = form.cleaned_data['lastname'],
-                street_num = form.cleaned_data['streetnum'],
-                street_name = form.cleaned_data['streetname'],
-                city = form.cleaned_data['city'],
-                state = form.cleaned_data['state'],
-                zip_code = form.cleaned_data['zipocde'],
-                preferred_style = form.cleaned_data['style'],
-                preferred_medium = form.cleaned_data['medium'],
-                phone_num = form.cleaned_data['phone'],
-                artist_id = form.cleaned_data['artistid']
-            )
-            database.save()
-            return HttpResponseRedirect('/customer')
+            #database = CustomerModel.objects.create(
+             #   customer_id = form.cleaned_data['customerid'],
+              #  first_name = form.cleaned_data['firstname'],
+               # last_name = form.cleaned_data['lastname'],
+                #street_num = form.cleaned_data['streetnum'],
+                #street_name = form.cleaned_data['streetname'],
+                #city = form.cleaned_data['city'],
+                #state = form.cleaned_data['state'],
+                #zip_code = form.cleaned_data['zipocde'],
+                #preferred_style = form.cleaned_data['style'],
+                #preferred_medium = form.cleaned_data['medium'],
+                #phone_num = form.cleaned_data['phone'],
+                #artist_id = form.cleaned_data['artistid']
+        #    )
+          #  database.save()
+            #return HttpResponseRedirect('/customer')
     else:
         form = CustomerForm()
 

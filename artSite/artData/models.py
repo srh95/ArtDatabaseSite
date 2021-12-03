@@ -14,14 +14,14 @@ class CustomerModel(models.Model):
     phone_num = models.CharField(max_length = 25)
     artist_id = models.IntegerField()
 
-class ArtWorkModel(models.Model):
-    title = models.CharField(max_length = 100)
-    year = models.IntegerField()
-    style = models.CharField(max_length = 50)
-    medium = models.CharField(max_length = 50)
-    asking_price = models.DecimalField()
-    artist_id = models.IntegerField()
-    collector_id = models.IntegerField()
+#class ArtWorkModel(models.Model):
+    #title = models.CharField(max_length = 100)
+    #year = models.IntegerField()
+    #style = models.CharField(max_length = 50)
+    #medium = models.CharField(max_length = 50)
+    #asking_price = models.DecimalField(8,2)
+    #artist_id = models.IntegerField()
+    #collector_id = models.IntegerField()
 
 class ArtistModel(models.Model):
     artist_id = models.IntegerField()
@@ -63,21 +63,21 @@ class ArtShowModel(models.Model):
     state = models.CharField(max_length = 50)
     zip_code = models.IntegerField()
 
-class RentModel(models.Model):
-    invoice_num = models.IntegerField()
-    start_date = models.DateField()
-    return_date = models.DateField()
-    duration = models.IntegerField()
-    rent_fee = models.DecimalField()
-    artist_percentage = models.IntegerField()
-    renter_id = models.IntegerField()
+#class RentModel(models.Model):
+#    invoice_num = models.IntegerField()
+#    start_date = models.DateField()
+#    return_date = models.DateField()
+#    duration = models.IntegerField()
+#    rent_fee = models.DecimalField(8,2)
+#    artist_percentage = models.IntegerField()
+#    renter_id = models.IntegerField()
 
-class SaleModel(models.Model):
-    sale_date = models.DateField()
-    invoice_num = models.IntegerField()
-    sale_price = models.DecimalField()
-    artist_percentage = models.IntegerField()
-    buyer_id = models.IntegerField()
+#class SaleModel(models.Model):
+#    sale_date = models.DateField()
+#    invoice_num = models.IntegerField()
+#    sale_price = models.DecimalField(8,2)
+#    artist_percentage = models.IntegerField()
+#    buyer_id = models.IntegerField()
 
 class RenterModel(models.Model):
     renter_id = models.IntegerField()
