@@ -1,7 +1,7 @@
 from django.db import models
 
 class CustomerModel(models.Model):
-    #customer_id = models.IntegerField()
+   # customer_id = models.IntegerField()
     first_name = models.CharField(max_length = 25)
     last_name = models.CharField(max_length = 25)
     street_num = models.IntegerField()
@@ -107,6 +107,9 @@ class query1(models.Model):
     show_name = models.CharField(max_length = 50)
     city = models.CharField(max_length = 50)
     count = models.IntegerField()
+
+class query2(models.Model):
+    avg_cost_to_buy = models.DecimalField(max_digits = 10, decimal_places=2)
 
 # class DisplayedModel(models.Model):
 #     show_name = models.ForeignKey(ArtShowModel, on_delete=models.CASCADE, null=True, blank=True)

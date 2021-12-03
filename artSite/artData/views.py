@@ -33,6 +33,9 @@ def homepage(request):
 def dataEntry(request):
     return render(request, 'dataEntry.html')
 
+def viewQueries(request):
+    return render(request, 'queries.html')
+
 def artist(request):
     artists = ArtistModel.objects.all()
     context = {'artists': artists}
@@ -180,6 +183,6 @@ def rented(request):
     context = {}
     return render(request, 'rented.html', context)
 
-def query1(request):
+def query1display(request):
     q1 = query1.objects.all()
     return render(request, 'query1.html', {'q1':q1})

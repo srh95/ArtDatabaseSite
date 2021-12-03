@@ -55,7 +55,7 @@ tr:nth-child(even) {
   </tr>
   <tr>
     {% for customer in customers %}
-    <td>{{customer.first_name}}</td>
+    <td>{{customer.last_name}}</td>
     {% endfor %}
   </tr>
   <tr>
@@ -103,6 +103,7 @@ tr:nth-child(even) {
     <td>{{customer.artist_id}}</td>
       {% endfor %}
   </tr>
+  {% endfor %}
   
 </table>
 
