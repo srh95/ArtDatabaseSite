@@ -24,7 +24,8 @@ urlpatterns = [
     path('addBuyer', views.addBuyer, name = 'addBuyer'),
     path('addRenter', views.addRenter, name = 'addRenter'),
     path('addSale', views.addSale, name = 'addSale'),
-    path('addRent', views.addRent, name = 'addRent')
+    path('addRent', views.addRent, name = 'addRent'),
+    path('query1',views.query1, name='query1')
 
 
     ]
