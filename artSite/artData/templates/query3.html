@@ -1,7 +1,59 @@
-Buyers that have spent more than $1000 at the gallery in the past 5 years:
-<br>
-{% for q3s in q3 %}
 
-{{q3s.buyer_id}}, {{q3s.first_name}}, {{q3s.last_name}}, {{q3s.street_num}}, {{q3s.street_name}}, {{q3s.city}}, {{q3s.state}}, {{q3s.zip_code}}<br>
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'stylesheet.css' %}">
 
-{% endfor %}
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+    <button id="back" class="buttnStyle" onclick="document.location.href = '/queries'"> Back </button>
+
+<h2 style="margin-top:100px;">Buyers that have spent more than $1000 at the gallery in the past 5 years</h2>
+
+<table style="margin-top:15px;">
+
+  <tr>
+    <th>Buyer ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Street Number</th>
+    <th>Street Name</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip code</th>
+  </tr>
+    {% for q3s in q3 %}
+  <tr>
+     <td>{{q3s.buyer_id}}</td>
+    <td>{{q3s.first_name}}</td>
+      <td>{q3s.last_name}}</td>
+      <td>{{q3s.street_num}}</td>
+      <td>{{q3s.street_name}}</td>
+      <td>{{q3s.city}}</td>
+      <td>{{q3s.state}}</td>
+      <td>{{q3s.zip_code}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+</body>
+</html>

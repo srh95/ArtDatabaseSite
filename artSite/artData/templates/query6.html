@@ -1,8 +1,49 @@
-The names and ids of buyers who have purchased at least one of every style:
-<br>
 
-{% for q6s in q6 %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'stylesheet.css' %}">
 
-{{q6s.buyer_id}}, {{q6s.first_name}}, {{q6s.last_name}}<br>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-{% endfor %}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+    <button id="back" class="buttnStyle" onclick="document.location.href = '/queries'"> Back </button>
+
+<h2 style="margin-top:100px;">Buyers who have purchased at least one of every style</h2>
+
+<table style="margin-top:15px;">
+
+  <tr>
+    <th>Buyer ID</th>
+    <th>First Name</th>
+      <th>Last Name</th>
+  </tr>
+    {% for q6s in q6 %}
+  <tr>
+     <td>{{q6s.buyer_id}}</td>
+    <td>{{q6s.first_name}}</td>
+      <td>{{q6s.lastname}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+</body>
+</html>

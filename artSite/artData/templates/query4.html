@@ -1,7 +1,47 @@
-Graphite on paper pieces under $2500:
-<br>
-{% for q4s in q4 %}
 
-{{q4s.title}}, {{q4s.artist_id}}<br>
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'stylesheet.css' %}">
 
-{% endfor %}
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+    <button id="back" class="buttnStyle" onclick="document.location.href = '/queries'"> Back </button>
+
+<h2 style="margin-top:100px;">Available pieces with rent fee under $2500</h2>
+
+<table style="margin-top:15px;">
+
+  <tr>
+    <th>Title</th>
+    <th>Artist ID</th>
+  </tr>
+    {% for q4s in q4 %}
+  <tr>
+     <td>{{q4s.title}}</td>
+    <td>{{q4s.artist_id}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+</body>
+</html>

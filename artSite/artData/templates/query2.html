@@ -1,7 +1,44 @@
-Average cost of pieces of ink on paper:
-<br>
-{% for q2s in q2 %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'stylesheet.css' %}">
 
-{{q2s.avg_cost_to_buy}}<br>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-{% endfor %}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+    <button id="back" class="buttnStyle" onclick="document.location.href = '/queries'"> Back </button>
+
+<h2 style="margin-top:100px;">Average cost of pieces of ink on paper::</h2>
+
+<table style="margin-top:15px;">
+
+  <tr>
+    <th>Average Cost to Purchase</th>
+  </tr>
+    {% for q2s in q2 %}
+  <tr>
+     <td>{{q2s.avg_cost_to_buy}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+</body>
+</html>

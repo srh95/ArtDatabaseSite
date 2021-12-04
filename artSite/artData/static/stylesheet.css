@@ -86,7 +86,7 @@ color: white;
 .selection-text{
     position: absolute;
     top: 170px;
-    left: 540px;
+    left: 490px;
 }
 
 #artwork{
@@ -313,4 +313,52 @@ fieldset {
 	box-shadow:0 0 10px #666;
     background-color: #f5f5f5;
     text-align: center;
+}
+
+#query1{
+    position: absolute;
+    padding: 15px 41px;
+    margin: 0 auto;
+    top: 400px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+
+}
+#query1:hover{
+    background: #000;
+}
+
+#query2{
+    position: absolute;
+    padding: 15px 41px;
+    margin: 0 auto;
+    top: 500px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+
+}
+#query2:hover{
+    background: #000;
+}
+
+#query3{
+    position: absolute;
+    padding: 15px 41px;
+    margin: 0 auto;
+    top: 600px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+
+}
+#query3:hover{
+    background: #000;
 }

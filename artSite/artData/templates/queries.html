@@ -3,16 +3,119 @@
     {% load static %}
     <link rel="stylesheet" href="{%static 'stylesheet.css' %}">
 </head>
+<style>
+ .selection-text{
+    position: absolute;
+    top: 170px;
+    left: 570px;
+}
+#query1{
+    position: absolute;
+    padding: 15px 41px;
+    left: 480px;
+    top: 250px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+
+}
+#query1:hover{
+    background: #000;
+}
+
+#query2{
+    position: absolute;
+    padding: 15px 41px;
+    left: 460px;
+    top: 320px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+
+}
+#query2:hover{
+    background: #000;
+}
+
+#query3{
+    position: absolute;
+    padding: 15px 41px;
+    left: 300px;
+    top: 390px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+
+}
+#query3:hover{
+    background: #000;
+}
+
+#query4{
+    position: absolute;
+    padding: 15px 41px;
+    left: 450px;
+    top: 460px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+
+}
+#query4:hover{
+    background: #000;
+}
+
+#query5{
+    position: absolute;
+    padding: 15px 41px;
+    left: 445px;
+    top: 530px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+
+}
+#query5:hover{
+    background: #000;
+}
+
+#query6{
+    position: absolute;
+    padding: 15px 41px;
+    left: 395px;
+    top: 600px;
+    background: #165397;
+    border-radius: 4px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+    color: white;
+
+}
+#query6:hover{
+    background: #000;
+}
+
+</style>
 <body>
 
     <button id="back" class="buttnStyle" onclick="document.location.href = ''"> Home </button>
 
- <h2 class="selection-text"> Select a Query </h2>
- <button id="artist" class="buttnStyle" onclick="document.location.href = '/query2'"> Query 2 </button>
- <button id="artwork" class="buttnStyle" onclick="document.location.href = '/query1'"> Query 1 </button>
- <button id="collector" class="buttnStyle" onclick="document.location.href = '/query3'"> Query 3 </button>
- <button id="customer" class="buttnStyle" onclick="document.location.href = '/query4'"> Query 4 </button>
- <button id="artshow" class="buttnStyle" onclick="document.location.href = '/query5'"> Query 5 </button>
- <button id="buyer" class="buttnStyle" onclick="document.location.href = '/query6'"> Query 6 </button>
+ <h2 class="selection-text"> Select a Query to View Results</h2>
+ <button id="query1" class="buttnStyle" onclick="document.location.href = '/query2'"> Average cost of "ink on paper" pieces: </button>
+ <button id="query2" class="buttnStyle" onclick="document.location.href = '/query1'"> Cities that have sold more than 10 Pieces: </button>
+ <button id="query3" class="buttnStyle" onclick="document.location.href = '/query3'"> Buyers that have spent more than $1000 at the gallery in the past 5 years: </button>
+ <button id="query4" class="buttnStyle" onclick="document.location.href = '/query4'"> "Available pieces with rent fee under $2500: </button>
+ <button id="query5" class="buttnStyle" onclick="document.location.href = '/query5'"> Buyers who have only bought pieces in 2021:  </button>
+ <button id="query6" class="buttnStyle" onclick="document.location.href = '/query6'"> Buyers who have purchased at least one of every style:  </button>
 </div>
 </body>
