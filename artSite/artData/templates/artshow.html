@@ -43,6 +43,7 @@ tr:nth-child(even) {
   <tr>
     {% for artshow in artshows %}
     <td>{{artshow.show_name}}</td>
+<<<<<<< HEAD
     {% endfor %}
   </tr>
   <tr>
@@ -87,6 +88,16 @@ tr:nth-child(even) {
   </tr>
   <tr>
     {% for artshow in artshows %}
+=======
+    <td>{{artshow.start_date}}</td>
+    <td>{{artshow.end_date}}</td>
+    <td>{{artshow.time}}</td>
+    <td>{{artshow.style}}</td>
+    <td>{{artshow.street_num}}</td>
+    <td>{{artshow.street_name}}</td>
+    <td>{{artshow.city}}</td>
+    <td>{{artshow.state}}</td>
+>>>>>>> 71a74eba04c795285363994dc1ec363c59744849
     <td>{{artshow.zip_code}}</td>
     {% endfor %}
   </tr>

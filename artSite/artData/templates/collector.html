@@ -43,36 +43,25 @@ tr:nth-child(even) {
     <th>Collection Type</th>
     <th>Collection Medium</th>
   </tr>
+    {% for collector in collectors %}
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
+     <td>{{collector.id}}</td>
+    <td>{{collector.first_name}}</td>
+    <td>{{collector.last_name}}</td>
+    <td>{{collector.street_num}}</td>
+    <td>{{collector.street_name}}</td>
+    <td>{{collector.city}}</td>
+    <td>{{collector.state}}</td>
+    <td>{{collector.zip_code}}</td>
+    <td>{{collector.phone_num}}</td>
+    <td>{{collector.artist_id}}</td>
+    <td>{{collector.collection_type}}</td>
+    <td>{{collector.collection_style}}</td>
+    <td>{{collector.collection_medium}}</td>
   </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
+  {% endfor %}
+
+
 </table>
 
 <button id="addbtn" class="centerbtn" onclick="document.location.href = '/addCollector'">Add Collector</button>

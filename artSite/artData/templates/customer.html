@@ -44,13 +44,9 @@ tr:nth-child(even) {
   </tr>
   {% for customer in customers %}
   <tr>
-      {% for customer in customers %}
     <td>{{customer.id}}</td>
-      {% endfor %}
-  </tr>
-  <tr>
-      {% for customer in customers %}
     <td>{{customer.first_name}}</td>
+<<<<<<< HEAD
       {% endfor %}
   </tr>
   <tr>
@@ -60,51 +56,25 @@ tr:nth-child(even) {
   </tr>
   <tr>
     {% for customer in customers %}
+=======
+    <td>{{customer.first_name}}</td>
+>>>>>>> 71a74eba04c795285363994dc1ec363c59744849
     <td>{{customer.street_num}}</td>
-    {% endfor %}
-  </tr>
-  <tr>
-    {% for customer in customers %}
     <td>{{customer.street_name}}</td>
-    {% endfor %}
-  </tr>
-  <tr>
-    {% for customer in customers %}
     <td>{{customer.city}}</td>
-    {% endfor %}
-  </tr>
-    <tr>
-      {% for customer in customers %}
     <td>{{customer.state}}</td>
-      {% endfor %}
-  </tr>
-    <tr>
-      {% for customer in customers %}
     <td>{{customer.zip_code}}</td>
-      {% endfor %}
-  </tr>
-    <tr>
-      {% for customer in customers %}
     <td>{{customer.preferred_style}}</td>
-      {% endfor %}
-  </tr>
-    <tr>
-      {% for customer in customers %}
     <td>{{preferred.medium}}</td>
-      {% endfor %}
-  </tr>
-    <tr>
-      {% for customer in customers %}
     <td>{{customer.phone_num}}</td>
-      {% endfor %}
-  </tr>
-    <tr>
-      {% for customer in customers %}
     <td>{{customer.artist_id}}</td>
-      {% endfor %}
   </tr>
   {% endfor %}
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 71a74eba04c795285363994dc1ec363c59744849
 </table>
 
 <button id="addbtn" class="centerbtn" onclick="document.location.href = '/addCustomer'">Add Customer</button>

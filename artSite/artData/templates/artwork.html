@@ -38,32 +38,54 @@ tr:nth-child(even) {
     <th>Medium</th>
     <th>Asking Price</th>
   </tr>
-  {% for artwork in artworks %}
+   {% for artwork in artworks %}
   <tr>
     <td>{{artwork.title}}</td>
-  </tr>
-  <tr>
     <td>{{artwork.artist_id}}</td>
-  </tr>
-  <tr>
     <td>{{artwork.collector_id}}</td>
-  </tr>
-  <tr>
     <td>{{artwork.year}}</td>
-  </tr>
-  <tr>
     <td>{{artwork.style}}</td>
-  </tr>
-  <tr>
     <td>{{artwork.type}}</td>
-  </tr>
-    <tr>
     <td>{{artwork.medium}}</td>
-  </tr>
-    <tr>
     <td>{{artwork.asking_price}}</td>
   </tr>
   {% endfor %}
+<!--  <tr>-->
+<!--    {% for artwork in artworks %}-->
+<!--    <td>{{artwork.artist_id}}</td>-->
+<!--    {% endfor %}-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    {% for artwork in artworks %}-->
+<!--    <td>{{artwork.collector_id}}</td>-->
+<!--    {% endfor %}-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    {% for artwork in artworks %}-->
+<!--    <td>{{artwork.year}}</td>-->
+<!--    {% endfor %}-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    {% for artwork in artworks %}-->
+<!--    <td>{{artwork.style}}</td>-->
+<!--    {% endfor %}-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    {% for artwork in artworks %}-->
+<!--    <td>{{artwork.type}}</td>-->
+<!--    {% endfor %}-->
+<!--  </tr>-->
+<!--    <tr>-->
+<!--      {% for artwork in artworks %}-->
+<!--    <td>{{artwork.medium}}</td>-->
+<!--      {% endfor %}-->
+<!--  </tr>-->
+<!--    <tr>-->
+<!--      {% for artwork in artworks %}-->
+<!--    <td>{{artwork.asking_price}}</td>-->
+<!--      {% endfor %}-->
+<!--  </tr>-->
+
 </table>
 
 <button id="addbtn" class="centerbtn" onclick="document.location.href = '/addArtwork'">Add Artwork</button>

@@ -88,6 +88,7 @@ WSGI_APPLICATION = 'artSite.wsgi.application'
 #          }
 #     }
 # }
+
 DATABASES = {
         'default': {
         'ENGINE': 'django.db.backends.mysql',
