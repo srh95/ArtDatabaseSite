@@ -10,7 +10,12 @@ from .models import(
     RenterModel,
     SaleModel,
     RentModel,
-    query1)
+    query1,
+    query2,
+    query3,
+    query4,
+    query5,
+    query6)
 from .forms import(
     CustomerForm,
     ArtistForm,
@@ -186,3 +191,23 @@ def rented(request):
 def query1display(request):
     q1 = query1.objects.all()
     return render(request, 'query1.html', {'q1':q1})
+
+def query2display(request):
+    q2 = query2.objects.all()
+    return render(request, 'query2.html', {'q2': q2})
+
+def query3display(request):
+    q3 = query3.objects.all()
+    return render(request, 'query3.html', {'q3': q3})
+
+def query4display(request):
+    q4 = query4.objects.all()
+    return render(request, 'query4.html', {'q4': q4})
+
+def query5display(request):
+    q5 = query5.objects.all()
+    return render(request, 'query5.html', {'q5': q5})
+
+def query6display(request):
+    q6 = query6.objects.all()
+    return render(request, 'query6.html', {'q6': q6})

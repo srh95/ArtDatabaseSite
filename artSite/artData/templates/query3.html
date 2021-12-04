@@ -1,0 +1,7 @@
+Buyers that have spent more than $1000 at the gallery in the past 5 years:
+<br>
+{% for q3s in q3 %}
+
+{{q3s.buyer_id}}, {{q3s.first_name}}, {{q3s.last_name}}, {{q3s.street_num}}, {{q3s.street_name}}, {{q3s.city}}, {{q3s.state}}, {{q3s.zip_code}}<br>
+
+{% endfor %}

@@ -26,7 +26,11 @@ urlpatterns = [
     path('addRenter', views.addRenter, name = 'addRenter'),
     path('addSale', views.addSale, name = 'addSale'),
     path('addRent', views.addRent, name = 'addRent'),
-    path('query1',views.query1display, name='query1')
-
+    path('query1',views.query1display, name='query1'),
+    path('query2', views.query2display, name = 'query2'),
+    path('query3', views.query3display, name = 'query3'),
+    path('query4', views.query4display, name = 'query4'),
+    path('query5', views.query5display, name = 'query5'),
+    path('query6', views.query6display, name = 'query6')
 
     ]

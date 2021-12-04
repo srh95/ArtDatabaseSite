@@ -1,0 +1,8 @@
+The names and ids of buyers who have purchased at least one of every style:
+<br>
+
+{% for q6s in q6 %}
+
+{{q6s.buyer_id}}, {{q6s.first_name}}, {{q6s.last_name}}<br>
+
+{% endfor %}

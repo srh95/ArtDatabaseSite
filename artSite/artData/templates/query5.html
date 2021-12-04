@@ -1,0 +1,7 @@
+Name and phone number of buyers who have only bought pieces in 2021:
+<br>
+{% for q5s in q5 %}
+
+{{q5s.buyer_id}}, {{q5s.first_name}}, {{q5s.last_name}}, {{q5s.phone_num}}<br>
+
+{% endfor %}
