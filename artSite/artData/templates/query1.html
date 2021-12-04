@@ -1,7 +1,46 @@
-Lists of Cities that have Sold more than 10 Pieces:<br>
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'stylesheet.css' %}">
 
-{% for q1s in q1 %}
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-{{q1s.show_name}}, {{q1s.city}}<br>
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
 
-{% endfor %}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+    <button id="back" class="buttnStyle" onclick="document.location.href = '/queries'"> Back </button>
+
+<h2 style="margin-top:100px;">Lists of Cities that have Sold more than 10 Pieces</h2>
+
+<table style="margin-top:15px;">
+
+  <tr>
+    <th>Show Name</th>
+    <th>City</th>
+  </tr>
+    {% for q1s in q1 %}
+  <tr>
+     <td>{{q1s.show_name}}</td>
+    <td>{{q1s.city}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+</body>
+</html>

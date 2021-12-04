@@ -1,7 +1,50 @@
-Name and phone number of buyers who have only bought pieces in 2021:
-<br>
-{% for q5s in q5 %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'stylesheet.css' %}">
 
-{{q5s.buyer_id}}, {{q5s.first_name}}, {{q5s.last_name}}, {{q5s.phone_num}}<br>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-{% endfor %}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+    <button id="back" class="buttnStyle" onclick="document.location.href = '/queries'"> Back </button>
+
+<h2 style="margin-top:100px;">Buyers who have only bought pieces in 2021</h2>
+
+<table style="margin-top:15px;">
+
+  <tr>
+    <th>Buyer ID</th>
+    <th>First Name</th>
+      <th>Last Name</th>
+      <th>Phone Number</th>
+  </tr>
+    {% for q5s in q5 %}
+  <tr>
+     <td>{{q5s.buyer_id}}</td>
+    <td>{{q5s.first_name}}</td>
+      <td>{{q5s.lastname}}</td>
+      <td>{{q5s.phone_num}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+</body>
+</html>
