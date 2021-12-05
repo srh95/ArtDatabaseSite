@@ -10,6 +10,9 @@ from .models import(
     RenterModel,
     SaleModel,
     RentModel,
+    DisplayedModel,
+    RentedModel,
+    SoldModel,
     query1,
     query2,
     query3,
@@ -25,7 +28,10 @@ from .forms import(
     BuyerForm,
     RenterForm,
     SaleForm,
-    RentForm)
+    RentForm,
+    DisplayedForm,
+    RentedForm,
+    SoldForm)
 
 
 def display(request):
@@ -177,16 +183,50 @@ def addSale(request):
     return render(request, 'addSale.html', context)
 
 def displayed(request):
-    context = {}
+    displays = DisplayedModel.objects.all()
+    context = {'displays': displays}
     return render(request, 'displayed.html', context)
 
 def sold(request):
-    context = {}
+    solds = SoldModel.objects.all()
+    context = {'solds': solds}
     return render(request, 'sold.html', context)
 
 def rented(request):
-    context = {}
+    renteds = RentedModel.objects.all()
+    context = {'renteds': renteds}
     return render(request, 'rented.html', context)
+
+def addDisplayed(request):
+    if request.method == 'POST':
+        form = DisplayedForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = DisplayedForm()
+    context = {'form': form}
+    return render(request, 'addDisplayed.html', context)
+
+def addSold(request):
+    if request.method == 'POST':
+        form = SoldForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = SoldForm()
+    context = {'form': form}
+    return render(request, 'addSold.html', context)
+
+def addRented(request):
+    if request.method == 'POST':
+        form = RentedForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = RentedForm()
+    context = {'form': form}
+    return render(request, 'addRented.html', context)
+
 
 def query1display(request):
     q1 = query1.objects.all()

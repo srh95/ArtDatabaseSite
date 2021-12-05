@@ -138,18 +138,18 @@ class query6(models.Model):
     last_name = models.CharField(max_length = 50)
 
 
-# class DisplayedModel(models.Model):
-#     show_name = models.ForeignKey(ArtShowModel, on_delete=models.CASCADE, null=True, blank=True)
-#     art_title = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True)
-#     artist_id_display = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True)
-# class RentedModel(models.Model):
-#     invoice_num_rent = models.ForeignKey(RentModel, on_delete=models.CASCADE, null=True, blank=True)
-#     title_rent = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True,)
-#     artist_id_rent = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True)
-# class SoldModel(models.Model):
-#     invoice_num_sale = models.ForeignKey(SaleModel, on_delete=models.CASCADE, null=True, blank=True)
-#     title_sold = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True)
-#     artist_id_sold = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True)
+class DisplayedModel(models.Model):
+    show_name = models.ForeignKey(ArtShowModel, on_delete=models.CASCADE, null=True, blank=True)
+    # art_title = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True)
+    # artist_id_display = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True)
+class RentedModel(models.Model):
+    # invoice_num_rent = models.ForeignKey(RentModel, on_delete=models.CASCADE, null=True, blank=True)
+    title_rent = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True,)
+    # artist_id_rent = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True)
+class SoldModel(models.Model):
+    # invoice_num_sale = models.ForeignKey(SaleModel, on_delete=models.CASCADE, null=True, blank=True)
+    # title_sold = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True)
+    artist_id_sold = models.ForeignKey(ArtWorkModel, on_delete=models.CASCADE, null=True, blank=True)
 
 
 
