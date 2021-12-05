@@ -34,39 +34,16 @@ tr:nth-child(even) {
     <th>Artist ID</th>
     <th>Title</th>
   </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
+  {% for sold in solds %}
+<tr>
+    <td>{{sold.invoice_num}}</td>
+    <td>{{sold.artist_id}}</td>
+    <td>{{sold.title}}</td>
   </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
+  {% endfor %}
 </table>
 
-<button id="addbtn" class="centerbtn">Add Artist</button>
+<button id="addbtn" class="centerbtn" onclick="document.location.href = '/addSold'">Add Sold Artwork</button>
 
 </body>
 </html>

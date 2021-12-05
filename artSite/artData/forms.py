@@ -8,10 +8,10 @@ from .models import(
     BuyerModel,
     RenterModel,
     RentModel,
-    SaleModel)
-    # RentedModel,
-    # SoldModel,
-    # DisplayedModel)
+    SaleModel,
+    RentedModel,
+    SoldModel,
+    DisplayedModel)
 
 
 class CustomerForm(forms.ModelForm):
@@ -58,4 +58,19 @@ class SaleForm(forms.ModelForm):
 class RentForm(forms.ModelForm):
     class Meta:
         model = RentModel
+        fields = '__all__'
+
+class RentedForm(forms.ModelForm):
+    class Meta:
+        model = RentedModel
+        fields = '__all__'
+
+class SoldForm(forms.ModelForm):
+    class Meta:
+        model = SoldModel
+        fields = '__all__'
+
+class DisplayedForm(forms.ModelForm):
+    class Meta:
+        model = DisplayedModel
         fields = '__all__'
