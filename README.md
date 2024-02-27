@@ -51,7 +51,7 @@ Make sure you have the following installed on your system:
    ```bash
    python manage.py runserver
    
-5. Access the web applicaiton in your browser at http://127.0.01:8000/.
+5. Access the web application in your browser at http://127.0.01:8000/.
 
 ### Usage 
 * Upon accessing the web application, you can navigate through different sections such as art pieces, artists, and art shows.
