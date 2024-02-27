@@ -6,7 +6,7 @@ To run the project locally, follow these steps:
 
 Make sure you have the following installed on your system:
 
-- Python (3.x recommended)
+- Python (3.7 recommended)
 - Django
 - MySQL
 
@@ -21,11 +21,6 @@ Make sure you have the following installed on your system:
 
    ```bash
    cd art-gallery-management
-
-3. Install project dependencies.
-   
-   ```bash
-   pip install -r requirements.txt
 
 
 ### Configuration 
